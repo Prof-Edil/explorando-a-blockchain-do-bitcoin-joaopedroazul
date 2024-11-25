@@ -4,4 +4,4 @@ command = 'bitcoin-cli -rpcconnect="84.247.182.145" -rpcuser="user_239" -rpcpass
 result = subprocess.check_output(command, shell=True, text=True).split('\n')[0]
 command2 = 'bitcoin-cli -rpcconnect="84.247.182.145" -rpcuser="user_239" -rpcpassword="JoFkBpY9NsUC" deriveaddresses '+result+' "[100,100]"'
 result2 = subprocess.check_output(command2, shell=True, text=True)
-print('"'+str(result2.split('"')[1])+'"')
+print(str(result2.split('"')[1]))
